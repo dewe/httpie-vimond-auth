@@ -1,7 +1,10 @@
-httpie-api-auth
+httpie-vimond-auth
 ===============
 
 Vimond API auth plugin for `HTTPie <https://httpie.org/>`_.
+
+.. image:: https://travis-ci.org/dewe/httpie-vimond-auth.svg?branch=master
+    :target: https://travis-ci.org/dewe/httpie-vimond-auth
 
 Installation
 ------------
