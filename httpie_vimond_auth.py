@@ -43,7 +43,7 @@ class VimondAuth:
             raise ValueError('Secret key cannot be empty.')
         else:
             r.headers['Authorization'] = 'SUMO %s:%s' % (self.username, signature)
-        print r.headers
+
         return r
 
 
