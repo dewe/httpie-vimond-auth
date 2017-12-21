@@ -17,8 +17,8 @@ __licence__ = 'MIT'
 
 
 class VimondAuth:
-    def __init__(self, username, secret_key):
-        self.username = username
+    def __init__(self, api_key, secret_key):
+        self.api_key = api_key
         self.secret_key = secret_key.encode('ascii')
 
     def __call__(self, r):
@@ -37,12 +37,12 @@ class VimondAuth:
         digest = hmac.new(self.secret_key, string_to_sign, hashlib.sha1).digest()
         signature = base64.encodestring(digest).rstrip().decode('utf-8')
 
-        if self.username == '':
-            raise ValueError('Username cannot be empty.')
+        if self.api_key == '':
+            raise ValueError('API key (user) cannot be empty.')
         elif self.secret_key == '':
-            raise ValueError('Secret key cannot be empty.')
+            raise ValueError('Secret key (password) cannot be empty.')
         else:
-            r.headers['Authorization'] = 'SUMO %s:%s' % (self.username, signature)
+            r.headers['Authorization'] = 'SUMO %s:%s' % (self.api_key, signature)
 
         return r
 

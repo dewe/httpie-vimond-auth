@@ -20,7 +20,7 @@ Usage
 
 .. code-block:: bash
 
-    $ http --auth-type=vimond --auth='user:secret' my-api-host.net
+    $ http --auth-type=vimond --auth='api_key:secret_key' <host>
 
 Dev setup
 ---------
