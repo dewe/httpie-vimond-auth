@@ -6,7 +6,7 @@ except ImportError:
 
 setup(
     name='httpie-vimond-auth',
-    description='Vimond API auth plugin for HTTPie.',
+    description='Vimond API SUMO auth plugin for HTTPie.',
     long_description=open('README.rst').read().strip(),
     version='0.0.1',
     author='Johan Dewe',

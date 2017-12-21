@@ -51,7 +51,7 @@ class VimondAuthPlugin(AuthPlugin):
 
     name = 'Vimond API auth'
     auth_type = 'vimond'
-    description = 'Sign requests using a SUMO header, specific for Vimond API'
+    description = 'Sign requests with a SUMO header, specific for Vimond API'
 
     def get_auth(self, username=None, password=None):
         return VimondAuth(username, password)
