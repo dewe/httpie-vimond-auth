@@ -13,7 +13,7 @@ Installation
 
 .. code-block:: bash
 
-    $ pip install httpie-vimond-auth
+    $ pip install git+https://github.com/dewe/httpie-vimond-auth
 
 You should now see ``vimond`` under ``--auth-type`` in ``$ http --help`` output.
 
